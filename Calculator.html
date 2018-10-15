@@ -1,0 +1,70 @@
+	<!-- 
+	This is a basic calculator developped by Nour Farhat.
+	it does basic calculations, detect errors and handles keyboard events.
+	when an unsupported key is pressed an alert pop up.
+	if a calculation error occur "Error" is displayed on the screen.
+	Press "Enter"  or "=" to evaluate the expression
+    -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Calculator</title>
+		<style>.center {
+			text-align: center;
+			border: 3px;
+		}
+		</style>
+	
+	</head>
+
+	<body>
+	<div class="top-banner"><h4>This Calculator was developped by Nour Farhat</h4></div>	
+	
+	<script type="text/javascript" src="calculator.js"></script>
+	<div class="container">
+	    <div class="calculator">
+	    
+	      <input type="text" class="displayBox" id="show" value=""> 
+	      <div class="keys">
+		  
+		    <button onclick="memory('c')" >MC</button>
+	        <button onclick="memory('r')" >MR</button>
+			<button onclick="memory('s')" >MS</button>
+	        <button onclick= "memory('add')">M+</button>
+			<button onclick= "memory('sub')">M-</button>
+			
+			<button class="back" onclick= "operation('Backspace')">&#8592;</button>
+			<button onclick ="erase()">CE</button>
+			<button onclick ="erase()">C</button>
+			<button onclick= "operation('sign')">+ -</button>
+			<button onclick= "operation('root')">&#8730;</button>
+			
+			<button onclick= "display(7)">7</button>
+	        <button onclick= "display(8)">8</button>
+	        <button onclick= "display(9)">9</button>
+	        <button onclick= "display('/')">÷</button>
+			<button onclick= "display('%')">%</button>
+			
+			<button onclick= "display(4)">4</button >
+	        <button onclick= "display(5)">5</button>
+	        <button onclick= "display(6)">6</button>
+			<button onclick= "display('*')">&times;</button>
+			<button onclick="operation('reciprc')" >1/x</button>
+			
+			<button onclick= "display(1)">1</button>
+	        <button onclick= "display(2)">2</button>
+	        <button onclick= "display(3)">3</button>
+			<button onclick= "display('-')">-</button>
+			<button class="equal"  onclick= "operation('=')">=</button>
+			
+			<button class="zero" onclick= "display(0)">0</button>
+	        <button onclick= "display('.')">.</button>
+			<button onclick= "display('+')">+</button> 
+			       
+	      </div>
+	    </div>
+  </div>
+  </body>
+</html>

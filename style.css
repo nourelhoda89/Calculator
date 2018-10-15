@@ -1,0 +1,106 @@
+body {
+  
+  align-items: center;
+  background-color:black;
+  display: grid;
+  height: 95vh;
+  justify-content: center;
+}
+.calculator {
+  box-shadow: 20px 20px 50px 10px inset;
+}
+#show{
+  font-family:Icelend,Courier,Verdana;
+  background-color:black;
+  color: #07f2f1;
+  font-size: 40px;
+  padding: 15px 15px;
+  text-align: right;
+  margin:3px;
+  border:none;
+}
+
+.keys {
+  background-color:black;
+  color:#43fbe0;
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.keys> button {
+  font-family:Icelend;
+  padding: 15px 1px;
+  background-color:black;
+  color:white;
+  font-size:24px;
+  border: 1px solid #007291;
+  border-radius: 10%;
+  margin:3px; 
+ 
+}
+.keys>button:hover {
+	background-image: linear-gradient( to bottom right, #07f2f1, #049190);
+    background-color:#009900; 
+}
+.zero{
+  grid-column: 1/span 2;
+  grid-row: 6;
+}
+.equal {
+  background-image: linear-gradient( to bottom , #0000FF ,#b2b2ff);
+  grid-column: -2;
+  grid-row: 5/ span 2;
+}
+
+
+.top-banner {
+	height: 50px;	
+	overflow: hidden;
+	position: relative;
+    background-color:black;
+	color: #fff;
+    font-size: 20px;
+    text-align: right;
+}
+/*Note that the following code for scrolling text was obtained from the internet since the use of <marquee> tag is not recommended for html5!
+source="https://www.quackit.com/css/codes/marquees/" */
+.top-banner h4 {
+	 font-family:Icelend;
+	 font-size: 20px;
+	 color: white;
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 margin: 0;
+	 line-height: 50px;
+	 text-align: center;
+	 /* Starting position */
+	 -moz-transform:translateX(100%);
+	 -webkit-transform:translateX(100%);	
+	 transform:translateX(100%);
+	 /* Apply animation to this element */	
+	 -moz-animation: top-banner 15s linear infinite;
+	 -webkit-animation: top-banner 15s linear infinite;
+	 animation: top-banner 15s linear infinite;
+	}
+	/* Move it (define the animation) */
+	@-moz-keyframes top-banner {
+	 0%   { -moz-transform: translateX(100%); }
+	 100% { -moz-transform: translateX(-100%); }
+	}
+	@-webkit-keyframes top-banner {
+	 0%   { -webkit-transform: translateX(100%); }
+	 100% { -webkit-transform: translateX(-100%); }
+	}
+	@keyframes top-banner {
+	 0%   { 
+	 -moz-transform: translateX(100%); /* Firefox bug fix */
+	 -webkit-transform: translateX(100%); /* Firefox bug fix */
+	 transform: translateX(100%); 		
+	 }
+	 100% { 
+	 -moz-transform: translateX(-100%); /* Firefox bug fix */
+	 -webkit-transform: translateX(-100%); /* Firefox bug fix */
+	 transform: translateX(-100%); 
+	 }
+}
